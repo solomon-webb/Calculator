@@ -5,7 +5,8 @@ const urlsToCache = [
   '/calculator/style.css',
   '/calculator/script.js',
   '/calculator/images/screenshot-narrow.png',
-  '/calculator/images/screenshot-wide.png'
+  '/calculator/images/screenshot-wide.png',
+  '/music/WhatsApp Audio 2025-09-09 at 15.51.50.mp3'
 ];
 
 self.addEventListener('install', event => {
@@ -19,3 +20,4 @@ self.addEventListener('fetch', event => {
     caches.match(event.request).then(response => response || fetch(event.request))
   );
 });
+
