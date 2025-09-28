@@ -48,6 +48,7 @@
         <p>&copy copyright <span id="year"></span>
           All rights reserved. Created and Design by 😍🥰Solomon🤑🤑</p>
       </div>
+      <button id="installBtn" style="display:none;">Install App</button>
     </footer>
     </div>
    
@@ -63,5 +64,31 @@
     <button class="musicbtn" onclick="document.getElementById(`music`).play()">Play music</button><br><br>
     <button class="musicbtn" onclick="document.getElementById(`music`).pause()">Pause music</button>
     </div>
+    <script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+
+  // Listen for the beforeinstallprompt event
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault(); // Prevent the default prompt
+    deferredPrompt = e;  // Save the event for later use
+    installBtn.style.display = 'block'; // Show the button
+  });
+
+  // When the button is clicked
+  installBtn.addEventListener('click', () => {
+    installBtn.style.display = 'none'; // Hide the button
+    deferredPrompt.prompt();  // Show the install prompt
+
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      deferredPrompt = null; // Clear the saved event
+    });
+  });
+</script>
 </body>
 </html>
