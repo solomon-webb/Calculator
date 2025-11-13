@@ -12,6 +12,7 @@
     function calculate() {
       try {
         display.value = eval(display.value);
+
         justCalculated = true;
       } catch {
         display.value = "Syntax Error";
@@ -49,14 +50,14 @@ window.addEventListener('beforeinstallprompt', (e) => {
 }
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/calculator/service-worker.js')
-    .then(() => console.log('Service Worker Registered'));
-}
-
-if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js');
   });
 }
-
-   
+   document.getElementById("year").textContent = new Date().getFullYear();
+   function copy() {
+      let text = document.getElementById("disp");
+      
+      navigator.clipboard.writeText(text.value) 
+      .then (() => alert("text copied successfully " + text.value))
+   }
