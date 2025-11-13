@@ -3,10 +3,7 @@ const urlsToCache = [
   '/calculator/',
   '/calculator/index.html',
   '/calculator/style.css',
-  '/calculator/script.js',
-  '/calculator/images/screenshot-narrow.png',
-  '/calculator/images/screenshot-wide.png',
-  '/calculator/music/whatsapp-audio-2025-09-09.mp3'
+  '/calculator/script.js'
 ];
 
 self.addEventListener('install', event => {
