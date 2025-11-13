@@ -19,15 +19,15 @@
   ],
   "screenshots": [
   {
-    "src": "screenshot.png",
-    "sizes": "1368x730",
-    "type": "image/png",
+    "src": "solomon.gif",
+    "sizes": "370x630",
+    "type": "image/gif",
     "form_factor": "narrow"
   },
   {
-    "src": "screenshot.png",
-    "sizes": "1368x730",
-    "type": "image/png",
+   "src": "solomon.gif",
+    "sizes": "370x630",
+    "type": "image/gif",
     "form_factor": "wide"
   }
 ]
