@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-   <link rel="manifest" href="manifest.json"><link rel="manifest" href="manifest.json">
+   <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#4CAF50">
+<link rel="shortcut icon" href="WhatsApp Image 2025-09-28 at 11.18.59 copy.jpeg" type="image/x-icon">
+<link rel="apple-touch-icon" href="WhatsApp Image 2025-09-28 at 11.18.59 copy.jpeg">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="style.css">
     <style>
         
@@ -14,34 +19,35 @@
 <body>
     <div class="calculator">
         <div class="header">
-            <h1>Scientific calculator</h1>
+            <h1>SoloVibe calculator</h1>
         </div>
         <div class="input-box">
-            <input type="text" name="#" id="disp" disabled class="input-field">
-            <i class="clear" onclick="clearDisplay()">c</i>
+            <input type="text" name="#" id="disp" disabled class="input-field" >
+             <i class="clear" onclick="deletee()">⌫</i>
+            <p id="copy" onclick="copy()">click to copy answer</p>
         </div>
         <div class="button">
+           <button class="btn "onclick="clearDisplay()">c </button>
             <button class="btn" onclick="press('1')">1</button>
+              <button class="btn sign"  onclick="press('+')">+</button>
               <button class="btn" onclick="press('2')">2</button>
-                <button class="btn"  onclick="press('+')">+</button>
                   <button class="btn"  onclick="press('3')">3</button>
+                   <button class="btn sign" onclick="press('-')">-</button>
                     <button class="btn"  onclick="press('4')">4</button>
-                      <button class="btn" onclick="press('-')">-</button>
                         <button class="btn" onclick="press('5')">5</button>
-                          <button class="btn" onclick="press('6')">6</button>
-                            <button class="btn" onclick="press('*')">&#215</button>
+                         <button class="btn sign" onclick="press('*')">&#215</button>
+                         <button class="btn" onclick="press('6')">6</button>
                               <button class="btn" onclick="press('7')">7</button>
+                               <button class="btn sign" onclick="press('/')">&#xf7</button>
                                 <button class="btn" onclick="press('8')">8</button>
-                                 <button class="btn" onclick="press('/')">&#xf7</button>
                                  <button class="btn" onclick="press('9')">9</button>
-                                   <button class="btn" onclick="press('0')">0</button>
-                                     <button class="btn" onclick="press('.')">.</button>
+                                     <button class="btn sign" onclick="press('.')">.</button>
+                                     
                                      <div class="wide">
-                                      <button class="btn result" onclick="deletee()">⌫</button>
-                                        <button class="btn result" onclick="calculate()">=</button>
-                                        
-
-                                        
+                                       <button class="btn result sign" onclick="press('0')">0</button>
+                                      
+                                        <button class="btn result sign" onclick="calculate()">=</button>
+                                
                                         </div>
         <footer class="footer">
       <div class="copyright">
@@ -55,15 +61,8 @@
     <script src="script.js">
     </script>
     <script src="service-worker.js"></script>
-    <audio autoplay loop id="music">
-      <source src="WhatsApp Audio 2025-09-09 at 15.51.50.mp3" type="audio/mpeg">
-      your Browser  does not suppor the music format
-    </audio>
+   
      
-       <div class="music-btnn">
-    <button class="musicbtn" onclick="document.getElementById(`music`).play()">Play music</button><br><br>
-    <button class="musicbtn" onclick="document.getElementById(`music`).pause()">Pause music</button>
-    </div>
     <script>
   let deferredPrompt;
   const installBtn = document.getElementById('installBtn');
